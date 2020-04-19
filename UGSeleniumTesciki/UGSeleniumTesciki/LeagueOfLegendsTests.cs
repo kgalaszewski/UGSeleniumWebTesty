@@ -1,15 +1,17 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 using System.Threading.Tasks;
+using UGSeleniumTesciki;
 
 namespace TestyUgSelenium
 {
     [TestFixture]
     public class LeagueOfLegendsTests
     {
-        string CURRENT_WEBSITE_ADDRESS = "https://auth.riotgames.com/login#client_id=rso-web-client-prod&login_hint=eune&redirect_uri=https%3A%2F%2Flogin.leagueoflegends.com%2Foauth2-callback&response_type=code&scope=openid&state=yEMI3eYDKlVzhovK4CRsxIZxf0JVEXSbc6r5rDg9byQ&ui_locales=en-pl";
-        string DRIVER_PATH = "D:\\Selenium\\chromedriver_win32";
+        private string DRIVER_PATH = SingletonStrings.Instance.PATH_CHROME_EXE;
+        string CURRENT_WEBSITE_ADDRESS = SingletonStrings.LIGO_LEGO_PATH;
 
         ChromeDriver chromeDriver;
 

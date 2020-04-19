@@ -2,14 +2,15 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using UGSeleniumTesciki;
 
 namespace TestyUgSelenium
 {
     [TestFixture]
     public class DiscordTests
     {
-        string DRIVER_PATH = "D:\\Selenium\\chromedriver_win32";
-        string CURRENT_WEBSITE_ADDRESS = "https://support.discordapp.com/hc/en-us";
+        private string DRIVER_PATH = SingletonStrings.Instance.PATH_CHROME_EXE;
+        private string CURRENT_WEBSITE_ADDRESS = SingletonStrings.DISCORD_PATH;
 
         ChromeDriver chromeDriver;
 

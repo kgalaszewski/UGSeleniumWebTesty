@@ -1,14 +1,15 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using UGSeleniumTesciki;
 
 namespace TestyUgSelenium
 {
     [TestFixture]
     public class WzrUgTests
     {
-        string CURRENT_WEBSITE_ADDRESS = "https://wzr.ug.edu.pl/studia/index.php?str=1879";
-        string DRIVER_PATH = "D:\\Selenium\\chromedriver_win32";
+        private string DRIVER_PATH = SingletonStrings.Instance.PATH_CHROME_EXE;
+        string CURRENT_WEBSITE_ADDRESS = SingletonStrings.WZR_UG_PATH;
 
         ChromeDriver chromeDriver;
 

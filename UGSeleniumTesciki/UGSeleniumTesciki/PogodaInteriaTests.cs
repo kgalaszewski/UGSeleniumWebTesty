@@ -1,14 +1,16 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
+using UGSeleniumTesciki;
 
 namespace TestyUgSelenium
 {
     [TestFixture]
     public class PogodaInteriaTests
     {
-        string CURRENT_WEBSITE_ADDRESS = "https://pogoda.interia.pl/prognoza-szczegolowa-gdansk,cId,8048";
-        string DRIVER_PATH = "D:\\Selenium\\chromedriver_win32";
+        private string DRIVER_PATH = SingletonStrings.Instance.PATH_CHROME_EXE;
+        string CURRENT_WEBSITE_ADDRESS = SingletonStrings.POGODA_INTERIA_PATH;
 
         ChromeDriver chromeDriver;
 
